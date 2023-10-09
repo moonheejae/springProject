@@ -1,11 +1,11 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.16'
+	id 'org.springframework.boot' version '2.7.6'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group = 'hello'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1-HEE'
 
 java {
 	sourceCompatibility = '11'
@@ -16,8 +16,9 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter:2.7.6'
+	implementation 'org.openingo.spring:spring-boot-x:4.3.2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.6'
 }
 
 tasks.named('test') {
