@@ -14,13 +14,21 @@ public class AppConfig {
     public MemberService memberService() {
 
         // 생성자 주입
-        return new MemberServiceImpl( new MemoryMemberRepository() );
+        return new MemberServiceImpl(memberRepository());
+    }
+
+    private MemoryMemberRepository memberRepository() {
+        return new MemoryMemberRepository();
     }
 
     public OrderService orderService() {
 
         // 생성자 주입
-        return new OrderServiceImpl( new MemoryMemberRepository(), new FixDiscountPolicy() );
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+    }
+
+    private FixDiscountPolicy discountPolicy() {
+        return new FixDiscountPolicy();
     }
 
 }
