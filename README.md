@@ -15,5 +15,10 @@ Spring Boot 2.7.16
 1. 2023-10-10
    - 회원 도메인, 주문과 할인 도메인을 개발 및 실행과 테스트 진행 (JUnit5)
    - 객체 지향 원리를 적용해 ServiceImpl  클래스는 실행만 하는 클래스로 DI 적용 (AppConfig를 통한 생성자 주입 추가)
-  
+   - AppConfig 리팩토링 
+   : AppConfig 클래스에서 new MemoryMemberRepository() 의 중복제거
+   
+     클래스의 역할과 구현 클래스를 보다 빠르게 파악할 수 있도록 리팩토링
+   - 
+
 
